@@ -1,0 +1,33 @@
+@import '_variable'
+@import '_reset'
+
+html 
+    background: $base-color
+    height: 100%
+body 
+    min-height: 1000px
+    width: 1050px
+    margin: 0 auto
+    font-family: 'Roboto Condensed', sans-serif
+    @media screen and (max-width: 320px)
+        width: 320px
+    header
+        padding-top: 20px
+        @media screen and (max-width: 320px)
+            padding-top: 0
+        .wrapperLogo,
+        .wrapperCatalog,
+        .wrappNavBtn
+            height: 48px
+            display: flex
+            align-items: center
+            @media screen and (max-width: 320px)
+            height: auto
+        @import wrapperLogo
+        @import wrapperCatalog
+    main
+        height: 100%
+        @import search
+        
+
+                

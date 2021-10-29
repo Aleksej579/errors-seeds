@@ -1,0 +1,224 @@
+.wrapperCatalog
+    margin: 20px 0 10px
+    @media screen and (max-width: 320px)
+        margin-top: 0
+
+    ul.header_menu > li:first-child
+        @media screen and (max-width: 320px)
+            background: $base-color-green
+    ul.header_menu 
+        color: $base-color-white
+        list-style: none
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+        width: 100%
+        padding: inherit
+        @media screen and (max-width: 320px)
+            flex-direction: column
+            margin-top: 0
+        li 
+            position: static
+            padding: 0
+            font-size: 15px
+            cursor: pointer
+            display: flex
+            @media screen and (max-width: 320px)
+                width: 90%
+                justify-content: space-between
+                height: 48px
+                align-items: center
+                border-bottom: 2px solid rgba(255,255,255,.05)
+                padding-left: 20px
+                padding-right: 20px
+            p.btn_menu_green
+                background: $base-color-green
+                padding: 10px 40px
+                position: relative
+                display: flex
+                align-items: center
+                justify-content: center
+                border-radius: 4px
+                @media screen and (max-width: 320px)
+                    width: 100%
+                    padding-left: 0
+                    display: block
+                & > span
+                    display: flex
+                    align-items: center
+                .icon
+                    display: block
+                    position: relative
+                    width: 20px
+                    height: 6px
+                    margin-right: 10px
+                .icon:before,
+                .icon:after
+                    content: ""
+                    display: block
+                    position: absolute
+                    width: 100%
+                    height: 2px
+                    border-radius: 4px
+                    background: $base-color-white
+                    left: 0
+                    transition: .3s
+                .icon:before
+                    top: 0
+                    transition: top .3s .3s cubic-bezier(.23,1,.32,1),transform .3s cubic-bezier(.23,1,.32,1)
+                .icon:after
+                    bottom: 0
+                    transition: bottom .3s .3s cubic-bezier(.23,1,.32,1),transform .3s cubic-bezier(.23,1,.32,1)
+            p.btn_menu_green.active
+                .icon:before
+                    transition: top .3s cubic-bezier(.23,1,.32,1),transform .3s .3s cubic-bezier(.23,1,.32,1)
+                    top: 2px
+                    width: 16px
+                    transform: rotate(-45deg)
+                .icon:after
+                    transition: bottom .3s cubic-bezier(.23,1,.32,1),transform .3s .3s cubic-bezier(.23,1,.32,1)
+                    bottom: 2px
+                    width: 16px
+                    transform: rotate(45deg)
+
+            .dropmenu
+                font-size: 15px
+                line-height: 120%
+                opacity: 0
+                position: absolute
+                top: 65px
+                border-radius: 4px
+                width: 100%
+                max-height: 0
+                overflow: hidden
+                font-size: 15px
+                left: 0
+                transition: max-height .3s linear,opacity .3s linear,padding .2s
+                line-height: 120%
+                background: $base-color
+                & > ul
+                    height: 600px
+                &:before 
+                    content: ""
+                    display: block
+                    width: 76%
+                    height: 100%
+                    top: 0
+                    right: 0
+                    opacity: 0.3
+                    transition: opacity .4s .8s linear
+                    background-image: url("img/menu_bg.jpg")
+                        background-repeat: repeat
+                        background-size: auto
+                    background-repeat: no-repeat
+                    background-size: 100%
+                    position: absolute
+                &.active
+                    min-height: 460px
+                    max-height: 600px
+                    opacity: 1
+                    transition: max-height .3s linear, opacity .3s linear
+                &.active ul
+                    color: white
+                    background: $base-color-grey
+                    border-left: 2px solid rgba(255,255,255,.05)
+                    border-right: 2px solid rgba(255,255,255,.05)
+                    width: Calc(25% - 40px)
+                    padding: 10px
+                    height: 100%
+                    position: absolute
+                    @media screen and (max-width: 320px)
+                        width: 100%
+                        z-index: 1
+                    li
+                        display: flex
+                        justify-content: space-between
+                        padding: 0 10px
+                        border-radius: 5px
+                        i 
+                            display: flex
+                            align-items: center
+                        ul.line
+                            width: 100%
+                            max-width: 280px
+                            top: 0
+                            display: block
+                            left: -100%
+                            opacity: 0
+                            z-index: -1
+                            transition: opacity 0ms linear,left 0ms cubic-bezier(.23,1,.32,1)
+                            position: absolute
+
+                        &:hover
+                            background: $base-color-grey-light
+                            color: $base-color-green
+
+                        &:hover > ul.line
+                            z-index: 1
+                            left: 100%
+                            opacity: 1
+                            transition: opacity .3s .3s linear,left 1s cubic-bezier(.23,1,.32,1)
+                            @media screen and (max-width: 320px)
+                                left: 60px
+
+        li.news a,
+        li.sale a
+            position: relative
+            color: white
+            text-decoration: none
+            &:after
+                display: block
+                position: absolute
+                left: 0
+                width: 0
+                height: 1px
+                background-color: white
+                content: ""
+                transition: width 0.2s ease-out
+            &:hover:after
+                width: 100%
+        li.sale a
+            color: red
+            text-transform: uppercase
+
+        .fas 
+            margin-left: 10px
+        li.about_store,
+        li.work
+            display: flex
+            align-items: center
+        li.about_store.top,
+        li.work.top
+            @media screen and (max-width: 320px)
+                position: absolute
+                background: green 
+        li.about_store,
+        li
+            ul.dropSubMenu
+                background: $base-color-grey
+                position: absolute
+                right: 0
+                left: 0
+                top: 60px
+                display: none
+            ul.dropSubMenu.activeSub
+                display: flex !important
+                flex-wrap: wrap
+                @media screen and (max-width: 320px)
+                    flex-direction: column
+                    z-index: 1
+                    width: 100%
+                    padding-left: 5px
+                li
+                    width: 33%
+                    transition: .3s
+                    padding: 10px
+                    border-radius: 4px
+                    @media screen and (max-width: 320px)
+                        width: 90%
+                    a 
+                        color: white
+                        text-decoration: none
+                        &:hover
+                            text-decoration: underline

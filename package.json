@@ -14,5 +14,7 @@
     "gulp-sass": "^5.0.0",
     "sass": "^1.43.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-include": "^2.4.1"
+  }
 }

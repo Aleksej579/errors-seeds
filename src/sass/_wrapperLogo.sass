@@ -1,0 +1,44 @@
+.wrapperLogo 
+    justify-content: space-between
+    @media screen and (max-width: 320px)
+        display: none
+    img
+        height: auto
+        width: 220px 
+    .wrappNavBtn 
+        button
+            cursor: pointer
+        button:not(.phone, .user, .cart)
+            height: 48px
+            display: flex
+            align-items: center
+            background: $base-color-grey
+            padding: 10px
+            border-radius: 4px
+            margin-left: 5px
+            margin-bottom: 5px
+            border: 2px solid $base-color-grey
+            font-size: 13px
+            color: $base-color-white
+            font-family: 'Roboto Condensed', sans-serif
+            &:hover
+                border: 2px solid $base-color-green
+            img 
+                width: 30px
+                height: auto
+        .phone, .user, .cart 
+            height: 48px
+            width: 48px
+            background-repeat: no-repeat
+            background-size: 70% 70%
+            background-position: 50% 50%
+            cursor: pointer
+            margin: 0 5px
+        .phone
+            background-image: url("img/phone.png")
+        .user
+            background-image: url("img/user.png")
+        .cart 
+            background: $base-color-green
+            padding: 8px
+            border-radius: 5px
