@@ -14,15 +14,15 @@ body {
   margin: 0 auto;
   font-family: "Roboto Condensed", sans-serif;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body {
-    width: 320px;
+    width: 360px;
   }
 }
 body header {
   padding-top: 20px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header {
     padding-top: 0;
   }
@@ -38,7 +38,7 @@ body header .wrappNavBtn {
 body header .wrapperLogo {
   justify-content: space-between;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperLogo {
     display: none;
   }
@@ -94,12 +94,12 @@ body header .wrapperLogo .wrappNavBtn .cart {
 body header .wrapperCatalog {
   margin: 20px 0 10px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperCatalog {
     margin-top: 0;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperCatalog ul.header_menu > li:first-child {
     background: #87d330;
   }
@@ -114,7 +114,7 @@ body header .wrapperCatalog ul.header_menu {
   width: 100%;
   padding: inherit;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperCatalog ul.header_menu {
     flex-direction: column;
     margin-top: 0;
@@ -127,7 +127,7 @@ body header .wrapperCatalog ul.header_menu li {
   cursor: pointer;
   display: flex;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperCatalog ul.header_menu li {
     width: 90%;
     justify-content: space-between;
@@ -147,7 +147,7 @@ body header .wrapperCatalog ul.header_menu li p.btn_menu_green {
   justify-content: center;
   border-radius: 4px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperCatalog ul.header_menu li p.btn_menu_green {
     width: 100%;
     padding-left: 0;
@@ -248,7 +248,7 @@ body header .wrapperCatalog ul.header_menu li .dropmenu.active ul {
   height: 100%;
   position: absolute;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperCatalog ul.header_menu li .dropmenu.active ul {
     width: 100%;
     z-index: 1;
@@ -285,7 +285,7 @@ body header .wrapperCatalog ul.header_menu li .dropmenu.active ul li:hover > ul.
   opacity: 1;
   transition: opacity 0.3s 0.3s linear, left 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperCatalog ul.header_menu li .dropmenu.active ul li:hover > ul.line {
     left: 60px;
   }
@@ -323,7 +323,7 @@ body header .wrapperCatalog ul.header_menu li.work {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperCatalog ul.header_menu li.about_store.top,
 body header .wrapperCatalog ul.header_menu li.work.top {
     position: absolute;
@@ -344,7 +344,7 @@ body header .wrapperCatalog ul.header_menu li ul.dropSubMenu.activeSub {
   display: flex !important;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperCatalog ul.header_menu li.about_store ul.dropSubMenu.activeSub,
 body header .wrapperCatalog ul.header_menu li ul.dropSubMenu.activeSub {
     flex-direction: column;
@@ -360,7 +360,7 @@ body header .wrapperCatalog ul.header_menu li ul.dropSubMenu.activeSub li {
   padding: 10px;
   border-radius: 4px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body header .wrapperCatalog ul.header_menu li.about_store ul.dropSubMenu.activeSub li,
 body header .wrapperCatalog ul.header_menu li ul.dropSubMenu.activeSub li {
     width: 90%;
@@ -387,7 +387,7 @@ body main #autosearch {
   box-sizing: border-box;
   width: 100%;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   body main #autosearch {
     display: none;
   }
